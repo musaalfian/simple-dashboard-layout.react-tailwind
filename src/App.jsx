@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import './App.css';
-import { FaBars, FaCog, FaHome, FaUser } from 'react-icons/fa';
+import { FaBars, FaHome } from 'react-icons/fa';
 
 function App() {
   const [isSidebarOpen, setIsSidebarOpen] = useState(true);
@@ -26,7 +26,7 @@ function App() {
             Dashboard
           </span>
         </div>
-        <div className='flex flex-col h-[calc(100vh-64px)] pt-8'>
+        <div className='flex flex-col h-[calc(100vh-64px)] pt-8 justify-between'>
           <ul className=''>
             <li
               className={`flex ${
@@ -34,33 +34,23 @@ function App() {
               } items-center px-4 py-2 cursor-pointer hover:bg-gray-700`}
             >
               <FaHome className='text-lg ' />
-              <span
-                className={`ml-4 text-lg transition-opacity duration-300 ${
-                  isSidebarOpen ? 'opacity-100' : 'opacity-0'
-                }`}
-              >
-                Home
-              </span>
+              <span className={`ml-4 text-lg duration-300 ${isSidebarOpen ? 'inline-block' : 'hidden'}`}>Home</span>
             </li>
-            <li className='flex items-center px-4 py-2 cursor-pointer hover:bg-gray-700'>
-              <FaUser className='text-lg' />
-              <span
-                className={`ml-4 text-lg transition-opacity duration-300 ${
-                  isSidebarOpen ? 'opacity-100' : 'opacity-0'
-                }`}
-              >
-                Profile
-              </span>
+            <li
+              className={`flex ${
+                isSidebarOpen ? '' : 'justify-center'
+              } items-center px-4 py-2 cursor-pointer hover:bg-gray-700`}
+            >
+              <FaHome className='text-lg ' />
+              <span className={`ml-4 text-lg duration-300 ${isSidebarOpen ? 'inline-block' : 'hidden'}`}>Home</span>
             </li>
-            <li className='flex items-center px-4 py-2 cursor-pointer hover:bg-gray-700'>
-              <FaCog className='text-lg' />
-              <span
-                className={`ml-4 text-lg transition-opacity duration-300 ${
-                  isSidebarOpen ? 'opacity-100' : 'opacity-0'
-                }`}
-              >
-                Settings
-              </span>
+            <li
+              className={`flex ${
+                isSidebarOpen ? '' : 'justify-center'
+              } items-center px-4 py-2 cursor-pointer hover:bg-gray-700`}
+            >
+              <FaHome className='text-lg ' />
+              <span className={`ml-4 text-lg duration-300 ${isSidebarOpen ? 'inline-block' : 'hidden'}`}>Home</span>
             </li>
           </ul>
           <p>tes</p>
